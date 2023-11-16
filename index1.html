@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Строку знаешь?</title>
+  </head>
+  <body>
+
+    <div class="firstfunction">
+      <form class="one">
+          Первая функция: 
+          <input type="text" name="ones" id="first">
+          <button onclick="F1()">Отправить</button>
+      </form>
+    <br>
+    </div>
+    <div class="secondfunction">
+      <form class="two">
+          Вторая функция: 
+          <input type="text" name="twos" id="second">
+          <button onclick="F2()">Отправить</button>
+      </form>
+    </div>
+
+    <script>
+      function F1() {
+          const stroke = document.getElementById("first").value;
+          document.write("Я не знаю никакого " + stroke);
+      }
+      function F2() {
+          const stroke = document.getElementById("second").value;
+          const randomNum = Math.random();
+          if (randomNum < stroke) {
+              document.write("Я знаю некое " + stroke);
+          } else {
+              document.write("Я не знаю " + stroke + ", а ты знаешь " + stroke + "?");
+              F1();
+          }
+      }
+    </script>
+  </body>
+</html>    
