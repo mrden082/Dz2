@@ -25,17 +25,18 @@
     <script>
       function F1() {
           const stroke = document.getElementById("first").value;
-          document.write("Я не знаю никакого " + stroke);
+          console.log("Я не знаю никакого " + stroke);
       }
       function F2() {
-          const stroke = document.getElementById("second").value;
-          const randomNum = Math.random();
-          if (randomNum < stroke) {
-              document.write("Я знаю некое " + stroke);
-          } else {
-              document.write("Я не знаю " + stroke + ", а ты знаешь " + stroke + "?");
-              F1();
-          }
+        const num = 0.5;
+        const stroke = document.getElementById("second").value;
+        const randomNum = Math.random();
+        if (randomNum < num) {
+          console.log("Я знаю некое " + stroke);        
+        } else {
+          console.log("Я не знаю никакого " + stroke + ", а ты знаешь " + stroke + "?");
+          F1();
+        }
       }
     </script>
   </body>
